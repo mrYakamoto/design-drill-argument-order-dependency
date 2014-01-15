@@ -2,9 +2,12 @@
  
 ##Learning Competencies 
 
+* Write code with accurate method definition, arguments, and return values
+* Recognize the characteristics of good code and Best Practices, and implement these in code.
+
 ##Summary 
 
- Once methods start taking more than one or two parameters, it can be difficult to remember their order.
+Once methods start taking more than one or two parameters, it can be difficult to remember their order.
 
 When a method expects its arguments to arrive in a particular order, it creates a *dependency*. The rest of your code now must *know* about this order, and that makes it brittle. What happens if you want to add or remove a parameter? Now you have to find every place where you call that method and change the argument order accordingly.
 
@@ -21,9 +24,9 @@ def make_a_speech(components = {})
 end
 ```
 
-## Objectives
+##Releases
 
-### Use named arguments
+###Release 0 : Use named arguments
 
 Take a look at the `House#initialize` method. My, how many parameters it has!
 
@@ -33,7 +36,7 @@ Refactor the method to use named arguments instead.
 
 Some of the parameters defined earlier take default values. Make sure that you incorporate that into your design.
 
-### Be wary of booleans
+###Release 1 : Be wary of booleans
 
 What happens when you pass a boolean or `nil` value as an argument? Take a look at this example:
 
@@ -61,9 +64,6 @@ herbie.headlights # => true  WAT?!
 The way to get around this is use `Hash#fetch`. Go read [Avdi Grim's post](http://devblog.avdi.org/2009/03/16/go-fetch/). Then refactor your code to use `Hash#fetch` instead of `Hash#[] || <default>` to avoid mishandling of falsey values.
  
 
-##Releases
-###Release 0 
-
-##Optimize Your Learning 
+<!-- ##Optimize Your Learning  -->
 
 ##Resources
